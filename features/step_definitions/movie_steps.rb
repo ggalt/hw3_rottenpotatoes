@@ -51,6 +51,6 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
   rating_list.split(',').each do |rating|
     ## note somehow there is a space being introduced between "ratings_" and "R"
     ## need to fix it for it to work!!!
-    step %Q{I #{check_str} "ratings_#{rating}"}
+    step %Q{I #{check_str} "ratings_#{rating.strip}"}
   end
 end
